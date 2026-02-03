@@ -77,36 +77,6 @@
             // Output: 0
             // Null-coalescing operator provides a default value
             #endregion
-
-            #region Q11
-            // int.Parse(s ?? "0") is only safe for null
-            // It still throws for non-numeric strings
-            #endregion
-
-            #region Q12
-            string? s12 = null;
-            // ! removes the warning but not the runtime exception
-            Console.WriteLine(s12?.Length ?? 0);
-            #endregion
-
-            #region Q13
-            string? s13 = null;
-            int x13 = Convert.ToInt32(s13);
-            Console.WriteLine(x13);
-            // Output: 0
-            // Convert.ToInt32 handles null
-            #endregion
-
-            #region Q14
-            // int.Parse(null) → ArgumentNullException
-            // Convert.ToInt32(null) → 0
-            #endregion
-
-            #region Q15
-            string? user = null;
-            Console.WriteLine(user?.ToUpper() ?? "Guest");
-            // Prints "Guest" when user is null
-            #endregion
         }
     }
 }
