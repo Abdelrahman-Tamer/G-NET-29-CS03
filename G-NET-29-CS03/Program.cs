@@ -50,7 +50,7 @@
 
             #region Q7
             object o7 = 10;
-            // long x7 = (long)o7; ❌
+            // long x7 = (long)o7; wrong
             long x7 = (long)(int)o7;
             Console.WriteLine(x7);
             // Must unbox as int first, then widen to long
